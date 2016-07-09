@@ -1,30 +1,24 @@
 # coding: utf-8
 
-from multiprocessing import Process
-from random import randrange
 from .utils import sys_ping
 from .const import DEBUG,\
-    MNG_EOC_MIN,\
-    MNG_EOC_MAX,\
-    MNG_EOM_MIN,\
-    MNG_EOM_MAX,\
-    DASH_MIN,\
-    DASH_MAX,\
-    DOT__MIN,\
-    DOT__MAX
+    MNG_EOC_AV,\
+    MNG_EOM_AV,\
+    DASH_AV,\
+    DOT__AV
 
 
 class IcmpSender(object):
     @staticmethod
     def _send__dot(dst: str, debug=DEBUG) -> None:
-        size = randrange(DOT__MIN, DOT__MAX)
+        size = DOT__AV
         if debug:
             print('dot', size, ':')
         sys_ping(dst, size, debug)
 
     @staticmethod
     def _send_dash(dst: str, debug=DEBUG) -> None:
-        size = randrange(DASH_MIN, DASH_MAX)
+        size = DASH_AV
         if debug:
             print('dash', size, ':')
         sys_ping(dst, size, debug)
@@ -33,7 +27,7 @@ class IcmpSender(object):
     def _send__eoc(dst: str, debug=DEBUG) -> None:
         """management, End of char
         """
-        size = randrange(MNG_EOC_MIN, MNG_EOC_MAX)
+        size = MNG_EOC_AV
         if debug:
             print('eoc', size, ':')
         sys_ping(dst, size, debug)
@@ -42,7 +36,7 @@ class IcmpSender(object):
     def _send__eom(dst: str, debug=DEBUG) -> None:
         """management, End of message
         """
-        size = randrange(MNG_EOM_MIN, MNG_EOM_MAX)
+        size = MNG_EOM_AV
         if debug:
             print('eom', size, ':')
         sys_ping(dst, size, debug)

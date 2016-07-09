@@ -1,7 +1,6 @@
 # coding: utf-8
 
 import socket
-from time import sleep
 from multiprocessing import Process
 import sys
 from .const import DEBUG,\

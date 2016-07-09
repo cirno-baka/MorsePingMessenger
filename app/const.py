@@ -2,17 +2,21 @@
 
 DEBUG = False
 
-MNG_EOC_MIN = 45  # \char
-MNG_EOC_MAX = 46  # 49
+MNG_EOC_MIN = 1  # \char
+MNG_EOC_AV = 8
+MNG_EOC_MAX = 15  #
 
-MNG_EOM_MIN = 50  # \msg
-MNG_EOM_MAX = 51  # 54
+MNG_EOM_MIN = 16  # \msg
+MNG_EOM_AV = 24
+MNG_EOM_MAX = 32  #
 
-DASH_MIN = 55     # -
-DASH_MAX = 56     # 59
+DASH_MIN = 33     # -
+DASH_AV = 40
+DASH_MAX = 48     #
 
-DOT__MIN = 60     # .
-DOT__MAX = 61     # 64
+DOT__MIN = 49     # .
+DOT__AV = 55
+DOT__MAX = 64     #
 
 from_morse = {'.-': 'a',
               '-...': 'b',
