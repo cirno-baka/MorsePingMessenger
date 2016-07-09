@@ -15,6 +15,8 @@ if __name__ == '__main__':
     while True:
         dst = input('Destination:')
         msg = input('Message:')
+        if not (dst or msg):
+            continue
         sender.send_msg(dst, msg)
 
 

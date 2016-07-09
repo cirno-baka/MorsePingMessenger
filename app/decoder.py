@@ -11,7 +11,7 @@ class MorseDecoder(object):
 
     @classmethod
     def decode_char(cls, char: str) -> str:
-        return cls.abc.get(char.lower())
+        return cls.abc.get(char.lower(), '')
 
     @classmethod
     def decode_str(cls, string: list, debug=DEBUG) -> str:
