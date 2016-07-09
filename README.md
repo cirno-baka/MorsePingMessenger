@@ -1,3 +1,5 @@
 # MorsePingMessenger
-messager, worked over system ping
+Messager, worked over system ping
+
+For local tests uncomment listener.py, 77 string.
 
