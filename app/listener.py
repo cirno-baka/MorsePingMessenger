@@ -73,7 +73,8 @@ class IcmpListener(object):
         while True:
             data, addr = self.socket.recvfrom(self.CHUNCK)
             if not data: continue
-            if self.helper.jump: continue
+            # to local tests activate:
+            # if self.helper.jump: continue
 
             unknown = self._make_morse(data)
 
@@ -92,7 +93,7 @@ class IcmpListener(object):
                 char.append(unknown)
 
             if self.DEBUG:
-                self.helper.count
+                # self.helper.count
                 print('symbol {}; char {}; msg {}'.format(unknown, char, msg))
             # sleep(self.TIMEOUT)
 
