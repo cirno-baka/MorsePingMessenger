@@ -50,6 +50,7 @@ class IcmpSender(object):
 
     @classmethod
     def _send_msg(cls, dst, msg, debug=DEBUG):
+        cls._send__eom(dst)
         for char in msg:
             for symbol in char:
                 cls._send_symbol(dst, symbol, debug)
